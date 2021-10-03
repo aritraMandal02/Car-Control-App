@@ -31,7 +31,7 @@ void setup() {
 // Connecting WiFi
 
   WiFi.mode(WIFI_STA);
-  WiFi.begin("AndroidAP48E8", "10203040");
+  WiFi.begin("your SSID", "your password");
 
   while (WiFi.status() != WL_CONNECTED)delay(500);
 
