@@ -9,7 +9,6 @@
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 
-String command;             //String to store app command state.
 int speedCar = 800;         // 400 - 1023.
 int speed_Coeff = 3;
 
