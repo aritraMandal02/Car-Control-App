@@ -19,22 +19,27 @@ int car_mode = 0;
 
 void setup() {
  
- pinMode(ENA, OUTPUT);
- pinMode(ENB, OUTPUT);  
- pinMode(IN_1, OUTPUT);
- pinMode(IN_2, OUTPUT);
- pinMode(IN_3, OUTPUT);
- pinMode(IN_4, OUTPUT); 
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);  
+  pinMode(IN_1, OUTPUT);
+  pinMode(IN_2, OUTPUT);
+  pinMode(IN_3, OUTPUT);
+  pinMode(IN_4, OUTPUT); 
   
   Serial.begin(115200);
   
 // Connecting WiFi
 
   WiFi.mode(WIFI_STA);
-  WiFi.begin("your SSID", "your password");
+  WiFi.begin("Galaxy M3107C0", "abcd1234");
 
-  while (WiFi.status() != WL_CONNECTED)delay(500);
+  while (WiFi.status() != WL_CONNECTED){
+    delay(500);
+    Serial.print(".");
+  }
 
+  Serial.println("");
+  Serial.println("IP Address:");
   Serial.println(WiFi.localIP());
  
  // Starting WEB-server 
